@@ -1,0 +1,127 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "About %@" : {
+      "comment" : "A main menu item to present a window about the application.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@について"
+          }
+        }
+      }
+    },
+    "DPI Sensitivity" : {
+      "comment" : "A menu item for each device to select one of supported DPIs in child menu items.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マウス感度(DPI)"
+          }
+        }
+      }
+    },
+    "Enabled" : {
+      "comment" : "A main menu item to toggle enable or disable service.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有効"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "comment" : "A main menu section title appears with the last error message.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラー"
+          }
+        }
+      }
+    },
+    "Linear wheel scroll" : {
+      "comment" : "A menu item for each device to toggle enable or disable linear wheel scroll.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定量スクロール"
+          }
+        }
+      }
+    },
+    "Quit %@" : {
+      "comment" : "A main menu item to terminate the application.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@を終了"
+          }
+        }
+      }
+    },
+    "Serial Number" : {
+      "comment" : "A menu section title appears with the serial number for each device.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シリアルナンバー"
+          }
+        }
+      }
+    },
+    "Start on Login" : {
+      "comment" : "A main menu item to start the application on login.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン時に起動"
+          }
+        }
+      }
+    },
+    "Swap wheel axis with Command key" : {
+      "comment" : "A menu item for each device to toggle enable or disable swapping scroll wheel event axis with command key.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクロールの向きをコマンドキーで入れ替える"
+          }
+        }
+      }
+    },
+    "Unknown Error" : {
+      "comment" : "A main menu item appears when there is an unknown error.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不明なエラー"
+          }
+        }
+      }
+    },
+    "Waiting Accessibility Access…" : {
+      "comment" : "A main menu item appears when the application is waiting Accessibility Access.",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセシビリティアクセスを許可してください…"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "hidpp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/niw/HIDPP",
+      "state" : {
+        "branch" : "master",
+        "revision" : "90cb9979eea877c1eb5ceda3ecca8be8114ccd8f"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "46989693916f56d1186bd59ac15124caef896560",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 2
+}

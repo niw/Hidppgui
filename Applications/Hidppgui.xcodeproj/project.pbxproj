@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5435DB0E2B3293D000217B5A /* HIDPP in Frameworks */ = {isa = PBXBuildFile; productRef = 5435DB0D2B3293D000217B5A /* HIDPP */; };
+		544DF0CE2B2D24CF00506863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544DF0CD2B2D24CF00506863 /* Assets.xcassets */; };
+		544DF0D12B2D24CF00506863 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544DF0D02B2D24CF00506863 /* Preview Assets.xcassets */; };
+		546D6FDA2BD73BD300C6131F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D6FD92BD73BD300C6131F /* Settings.swift */; };
+		546D6FE02BD74F5200C6131F /* ServiceSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 546D6FDF2BD74F5200C6131F /* ServiceSupport */; };
+		546D6FE22BD74F8C00C6131F /* DeviceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D6FE12BD74F8C00C6131F /* DeviceSetting.swift */; };
+		546D6FE42BD7553F00C6131F /* MainMenu.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 546D6FE32BD7553F00C6131F /* MainMenu.xcstrings */; };
+		54C50DF72B2D256E00F16034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF12B2D256E00F16034 /* AppDelegate.swift */; };
+		54C50DF82B2D256E00F16034 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF22B2D256E00F16034 /* Service.swift */; };
+		54C50DFA2B2D256E00F16034 /* LoginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF42B2D256E00F16034 /* LoginItem.swift */; };
+		54C50DFB2B2D256E00F16034 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF52B2D256E00F16034 /* MainApp.swift */; };
+		54C50DFC2B2D256E00F16034 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF62B2D256E00F16034 /* MainMenu.swift */; };
+		54F2C3832BCB92E100E66E68 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2C3822BCB92E100E66E68 /* Device.swift */; };
+		54F2C3852BCE549600E66E68 /* MouseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2C3842BCE549600E66E68 /* MouseService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		544DF0C62B2D24CE00506863 /* Hidppgui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hidppgui.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		544DF0CD2B2D24CF00506863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		544DF0D02B2D24CF00506863 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		546D6FD92BD73BD300C6131F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		546D6FE12BD74F8C00C6131F /* DeviceSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSetting.swift; sourceTree = "<group>"; };
+		546D6FE32BD7553F00C6131F /* MainMenu.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = MainMenu.xcstrings; sourceTree = "<group>"; };
+		549A4A702B2D9C67009F9877 /* Hidppgui */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Hidppgui; path = ..; sourceTree = "<group>"; };
+		54C50DF12B2D256E00F16034 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54C50DF22B2D256E00F16034 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		54C50DF42B2D256E00F16034 /* LoginItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginItem.swift; sourceTree = "<group>"; };
+		54C50DF52B2D256E00F16034 /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		54C50DF62B2D256E00F16034 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		54F2C3822BCB92E100E66E68 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		54F2C3842BCE549600E66E68 /* MouseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		544DF0C32B2D24CE00506863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546D6FE02BD74F5200C6131F /* ServiceSupport in Frameworks */,
+				5435DB0E2B3293D000217B5A /* HIDPP in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		544C08A22B2D2663002A1489 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		544DF0BD2B2D24CE00506863 = {
+			isa = PBXGroup;
+			children = (
+				544DF0C82B2D24CE00506863 /* Hidppgui */,
+				54C50DFD2B2D25CB00F16034 /* Packages */,
+				544DF0C72B2D24CE00506863 /* Products */,
+				544C08A22B2D2663002A1489 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		544DF0C72B2D24CE00506863 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				544DF0C62B2D24CE00506863 /* Hidppgui.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		544DF0C82B2D24CE00506863 /* Hidppgui */ = {
+			isa = PBXGroup;
+			children = (
+				544DF0CF2B2D24CF00506863 /* Preview Content */,
+				54C50DEF2B2D254700F16034 /* Resources */,
+				54C50DF02B2D255400F16034 /* Sources */,
+			);
+			path = Hidppgui;
+			sourceTree = "<group>";
+		};
+		544DF0CF2B2D24CF00506863 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				544DF0D02B2D24CF00506863 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54C50DEF2B2D254700F16034 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				544DF0CD2B2D24CF00506863 /* Assets.xcassets */,
+				546D6FE32BD7553F00C6131F /* MainMenu.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		54C50DF02B2D255400F16034 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				54C50DF12B2D256E00F16034 /* AppDelegate.swift */,
+				54F2C3822BCB92E100E66E68 /* Device.swift */,
+				546D6FE12BD74F8C00C6131F /* DeviceSetting.swift */,
+				54C50DF42B2D256E00F16034 /* LoginItem.swift */,
+				54C50DF52B2D256E00F16034 /* MainApp.swift */,
+				54C50DF62B2D256E00F16034 /* MainMenu.swift */,
+				54F2C3842BCE549600E66E68 /* MouseService.swift */,
+				54C50DF22B2D256E00F16034 /* Service.swift */,
+				546D6FD92BD73BD300C6131F /* Settings.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		54C50DFD2B2D25CB00F16034 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				549A4A702B2D9C67009F9877 /* Hidppgui */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		544DF0C52B2D24CE00506863 /* Hidppgui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 544DF0D52B2D24CF00506863 /* Build configuration list for PBXNativeTarget "Hidppgui" */;
+			buildPhases = (
+				544DF0C22B2D24CE00506863 /* Sources */,
+				544DF0C32B2D24CE00506863 /* Frameworks */,
+				544DF0C42B2D24CE00506863 /* Resources */,
+				544C08A52B2D26ED002A1489 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hidppgui;
+			packageProductDependencies = (
+				5435DB0D2B3293D000217B5A /* HIDPP */,
+				546D6FDF2BD74F5200C6131F /* ServiceSupport */,
+			);
+			productName = Hidppgui;
+			productReference = 544DF0C62B2D24CE00506863 /* Hidppgui.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		544DF0BE2B2D24CE00506863 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					544DF0C52B2D24CE00506863 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
+				};
+			};
+			buildConfigurationList = 544DF0C12B2D24CE00506863 /* Build configuration list for PBXProject "Hidppgui" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 544DF0BD2B2D24CE00506863;
+			productRefGroup = 544DF0C72B2D24CE00506863 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				544DF0C52B2D24CE00506863 /* Hidppgui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		544DF0C42B2D24CE00506863 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546D6FE42BD7553F00C6131F /* MainMenu.xcstrings in Resources */,
+				544DF0D12B2D24CF00506863 /* Preview Assets.xcassets in Resources */,
+				544DF0CE2B2D24CF00506863 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		544C08A52B2D26ED002A1489 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n\nset -euo pipefail\n\nfor service in Accessibility ListenEvent; do\n  /usr/bin/tccutil reset \"$service\" \"${PRODUCT_BUNDLE_IDENTIFIER}\" || true\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		544DF0C22B2D24CE00506863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F2C3852BCE549600E66E68 /* MouseService.swift in Sources */,
+				54C50DF72B2D256E00F16034 /* AppDelegate.swift in Sources */,
+				54C50DFC2B2D256E00F16034 /* MainMenu.swift in Sources */,
+				546D6FE22BD74F8C00C6131F /* DeviceSetting.swift in Sources */,
+				54C50DF82B2D256E00F16034 /* Service.swift in Sources */,
+				54F2C3832BCB92E100E66E68 /* Device.swift in Sources */,
+				54C50DFB2B2D256E00F16034 /* MainApp.swift in Sources */,
+				546D6FDA2BD73BD300C6131F /* Settings.swift in Sources */,
+				54C50DFA2B2D256E00F16034 /* LoginItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		544DF0D32B2D24CF00506863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+			};
+			name = Debug;
+		};
+		544DF0D42B2D24CF00506863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+			};
+			name = Release;
+		};
+		544DF0D62B2D24CF00506863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hidppgui/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hidppgui;
+				INFOPLIST_KEY_LSUIElement = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = at.niw.Hidppgui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		544DF0D72B2D24CF00506863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hidppgui/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hidppgui;
+				INFOPLIST_KEY_LSUIElement = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = at.niw.Hidppgui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		544DF0C12B2D24CE00506863 /* Build configuration list for PBXProject "Hidppgui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				544DF0D32B2D24CF00506863 /* Debug */,
+				544DF0D42B2D24CF00506863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		544DF0D52B2D24CF00506863 /* Build configuration list for PBXNativeTarget "Hidppgui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				544DF0D62B2D24CF00506863 /* Debug */,
+				544DF0D72B2D24CF00506863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5435DB0D2B3293D000217B5A /* HIDPP */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HIDPP;
+		};
+		546D6FDF2BD74F5200C6131F /* ServiceSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ServiceSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 544DF0BE2B2D24CE00506863 /* Project object */;
+}
