@@ -29,6 +29,24 @@ private final class UncheckedBox<T>: @unchecked Sendable {
     }
 }
 
+private extension HIDPPDevice.Battery {
+    var battery: Battery {
+        let state: Battery.State = if let status {
+            switch status {
+            case .discharging, .charged:
+                .discharging
+            case .almostFull, .charging, .slowRecharge:
+                .charging
+            case .invalidBattery, .terminalError, .otherError:
+                .unknown
+            }
+        } else {
+            .unknown
+        }
+        return Battery(state: state, percentage: Int(percentage))
+    }
+}
+
 // NOTE: This is intentionally `class` which thread safety is managed by the caller.
 // Since some properties (such as `isRegularScrollWheelEnabled`) need to be accessed synchronously,
 // This is implemented as `class`.
@@ -41,6 +59,12 @@ private final class MouseDevice: @unchecked Sendable {
     let serialNumber: String
     let eventServiceEntryID: UInt64
     let supportedDPIs: [UInt16]
+
+    private(set) var battery: HIDPPDevice.Battery
+
+    func updateBattery(on _: isolated any Actor) async throws {
+        battery = try await hidppDevice.battery
+    }
 
     private(set) var preferredDPI: UInt16
 
@@ -67,6 +91,7 @@ private final class MouseDevice: @unchecked Sendable {
         name = try await hidppDevice.name
         serialNumber = try await hidppDevice.serialNumber
         eventServiceEntryID = try await hidppDevice.eventServiceEntryID
+        battery = try await hidppDevice.battery
         switch try await hidppDevice.DPIList() {
         case .values(let values):
             supportedDPIs = values
@@ -89,6 +114,7 @@ private final class MouseDevice: @unchecked Sendable {
             name: name,
             serialNumber: serialNumber,
             eventServiceEntryID: eventServiceEntryID,
+            battery: battery.battery,
             supportedDPIs: supportedDPIs,
             preferredDPI: preferredDPI,
             isLinearScrollWheelEnabled: isLinearScrollWheelEnabled,
@@ -280,5 +306,18 @@ final actor MouseService {
             }
         }
         self.task = task
+    }
+
+    func updateDevices() async {
+        let devices = mouseDevices.value
+        for device in devices.values {
+            do {
+                try await device.updateBattery(on: self)
+            } catch {
+                self.lastError = error
+            }
+        }
+        // Trigger callback.
+        mouseDevices.value = devices
     }
 }

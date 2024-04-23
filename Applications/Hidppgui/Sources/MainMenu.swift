@@ -71,6 +71,56 @@ struct LoginItemView: View {
     }
 }
 
+struct BatteryView: View {
+    var battery: Battery
+
+    var body: some View {
+        Label {
+            switch battery.state {
+            case .discharging:
+                Text(
+                    "\(battery.percentage)%",
+                    tableName: "MainMenu",
+                    comment: "A main menu item label appears next to the battery icon while discharging the battery at given percentage."
+                )
+            case .charging:
+                Text(
+                    "\(battery.percentage)% Charing…",
+                    tableName: "MainMenu",
+                    comment: "A main menu item label appears next to the battery icon while charging the battery at given percentage."
+                )
+            case .unknown:
+                Text(
+                    "Unknown state",
+                    tableName: "MainMenu",
+                    comment: "A main menu item label appears next to the battery icon when battery state is unknown."
+                )
+            }
+        } icon: {
+            let name = switch battery.state {
+            case .discharging:
+                if battery.percentage < 1 {
+                    "battery.0percent"
+                } else if battery.percentage < 50 {
+                    "battery.25percent"
+                } else if battery.percentage < 75 {
+                    "battery.50percent"
+                } else if battery.percentage < 99 {
+                    "battery.75percent"
+                } else {
+                    "battery.100percent"
+                }
+            case .charging:
+                "battery.100percent.bolt"
+            case .unknown:
+                "exclamationmark.triangle.fill"
+            }
+            Image(systemName: name)
+        }
+        .labelStyle(.titleAndIcon)
+    }
+}
+
 struct DeviceView: View {
     @Binding
     var device: Device
@@ -87,6 +137,13 @@ struct DeviceView: View {
                 } label: {
                     Text(device.serialNumber)
                 }
+            }
+            Section(String(
+                localized: "Battery",
+                table: "MainMenu",
+                comment: "A menu section title appears with a battery state for each device."
+            )) {
+                BatteryView(battery: device.battery)
             }
             Picker(selection: $device.preferredDPI) {
                 ForEach(device.supportedDPIs, id: \.self) { dpi in

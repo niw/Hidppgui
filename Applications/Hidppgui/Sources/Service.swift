@@ -98,4 +98,11 @@ final class Service {
 
         isEnabled = true
     }
+
+    func updateDevices() async {
+        guard let mouseService else {
+            return
+        }
+        await mouseService.updateDevices()
+    }
 }
