@@ -77,7 +77,7 @@ private final class MouseDevice: @unchecked Sendable {
         preferredDPI = try await hidppDevice.DPI()
     }
 
-    func update(with device: Device, on actor: isolated any Actor) async throws {
+    func set(device: Device, on actor: isolated any Actor) async throws {
         // Called on the given actor executor.
         try await setPreferredDPI(device.preferredDPI, on: actor)
         isLinearScrollWheelEnabled = device.isLinearScrollWheelEnabled
@@ -96,7 +96,7 @@ private final class MouseDevice: @unchecked Sendable {
         )
     }
 
-    func update(with setting: DeviceSetting, on actor: isolated any Actor) async throws {
+    func set(setting: DeviceSetting, on actor: isolated any Actor) async throws {
         // Called on the given actor executor.
         if let preferredDPI = setting.preferredDPI {
             try await setPreferredDPI(preferredDPI, on: actor)
@@ -166,7 +166,7 @@ final actor MouseService {
                 continue
             }
             do {
-                try await mouseDevice.update(with: device, on: self)
+                try await mouseDevice.set(device: device, on: self)
                 await settings.saveSetting(mouseDevice.setting)
             } catch {
                 lastError = error
@@ -191,7 +191,7 @@ final actor MouseService {
 
         if let deviceSetting: DeviceSetting = await settings.setting(forKey: mouseDevice.serialNumber) {
             do {
-                try await mouseDevice.update(with: deviceSetting, on: self)
+                try await mouseDevice.set(setting: deviceSetting, on: self)
             } catch {
                 lastError = error
             }
