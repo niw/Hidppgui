@@ -77,6 +77,7 @@ final class Service {
             } else {
                 mouseService = nil
                 devices = []
+                lastError = nil
             }
         }
     }
