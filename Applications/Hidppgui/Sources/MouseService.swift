@@ -71,8 +71,15 @@ private final class MouseDevice: @unchecked Sendable {
     private func setPreferredDPI(_ value: UInt16, on _: isolated any Actor) async throws {
         // Called on the given actor executor.
         if preferredDPI != value {
-            try await hidppDevice.setDPI(value)
+            // Optimistically update the current value.
+            let oldValue = preferredDPI
             preferredDPI = value
+            do {
+                try await hidppDevice.setDPI(value)
+            } catch {
+                preferredDPI = oldValue
+                throw error
+            }
         }
     }
 
@@ -104,9 +111,9 @@ private final class MouseDevice: @unchecked Sendable {
 
     func set(device: Device, on actor: isolated any Actor) async throws {
         // Called on the given actor executor.
-        try await setPreferredDPI(device.preferredDPI, on: actor)
         isLinearScrollWheelEnabled = device.isLinearScrollWheelEnabled
         isSwapScrollWheelEventAxisWithCommandKeyEnabled = device.isSwapScrollWheelEventAxisWithCommandKeyEnabled
+        try await setPreferredDPI(device.preferredDPI, on: actor)
     }
 
     var device: Device {
@@ -124,14 +131,14 @@ private final class MouseDevice: @unchecked Sendable {
 
     func set(setting: DeviceSetting, on actor: isolated any Actor) async throws {
         // Called on the given actor executor.
-        if let preferredDPI = setting.preferredDPI {
-            try await setPreferredDPI(preferredDPI, on: actor)
-        }
         if let isLinearScrollWheelEnabled = setting.isLinearScrollWheelEnabled {
             self.isLinearScrollWheelEnabled = isLinearScrollWheelEnabled
         }
         if let isSwapScrollWheelEventAxisWithCommandKeyEnabled = setting.isSwapScrollWheelEventAxisWithCommandKeyEnabled {
             self.isSwapScrollWheelEventAxisWithCommandKeyEnabled = isSwapScrollWheelEventAxisWithCommandKeyEnabled
+        }
+        if let preferredDPI = setting.preferredDPI {
+            try await setPreferredDPI(preferredDPI, on: actor)
         }
     }
 
@@ -187,8 +194,9 @@ final actor MouseService {
     }
 
     func updateDevices(with devices: [Device]) async {
+        let mouseDevices = mouseDevices.value
         for device in devices {
-            guard let mouseDevice = mouseDevices.value[device.eventServiceEntryID] else {
+            guard let mouseDevice = mouseDevices[device.eventServiceEntryID] else {
                 continue
             }
             do {
@@ -198,6 +206,9 @@ final actor MouseService {
                 lastError = error
             }
         }
+        // Trigger callback.
+        // This is always needed because the update is reentrant.
+        self.mouseDevices.value = mouseDevices
     }
 
     private func addHIDPPDevice(_ hidppDevice: HIDPPDevice) async throws {
@@ -308,15 +319,16 @@ final actor MouseService {
     }
 
     func updateDevices() async {
-        let devices = mouseDevices.value
-        for device in devices.values {
+        let mouseDevices = mouseDevices.value
+        for mouseDevice in mouseDevices.values {
             do {
-                try await device.updateBattery(on: self)
+                try await mouseDevice.updateBattery(on: self)
             } catch {
                 self.lastError = error
             }
         }
         // Trigger callback.
-        mouseDevices.value = devices
+        // This is always needed because the update is reentrant.
+        self.mouseDevices.value = mouseDevices
     }
 }
