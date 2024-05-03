@@ -41,7 +41,7 @@ final actor Settings {
         var settingsDictionary = userDefaults.dictionary(forKey: rootKey) ?? [:]
         settingsDictionary[key] = settingDictionary
 
-        userDefaults.setValue(settingsDictionary as NSDictionary, forKey: rootKey)
+        userDefaults.set(settingsDictionary as NSDictionary, forKey: rootKey)
     }
 
     func saveSetting<T: Setting & Identifiable<String>>(_ setting: T) {
