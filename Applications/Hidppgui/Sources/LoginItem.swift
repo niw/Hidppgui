@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Observation
 import ServiceManagement
 
 private extension SMAppService {
