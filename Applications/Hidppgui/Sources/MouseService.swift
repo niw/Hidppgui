@@ -269,7 +269,6 @@ final actor MouseService {
             guard event.isMouseScrollWheelEvent else {
                 return
             }
-
             guard let device = mouseDevices.value[event.deviceRegistryEntryID] else {
                 return
             }
