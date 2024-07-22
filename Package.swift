@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -31,3 +31,13 @@ let package = Package(
         )
     ]
 )
+
+for target in package.targets {
+    var swiftSettings = target.swiftSettings ?? []
+    swiftSettings.append(contentsOf: [
+        // Use `-strict-concurrency=complete`.
+        // See <https://github.com/apple/swift/pull/66991>.
+        .enableExperimentalFeature("StrictConcurrency")
+    ])
+    target.swiftSettings = swiftSettings
+}
