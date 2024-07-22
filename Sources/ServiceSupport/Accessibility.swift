@@ -6,6 +6,8 @@
 //
 
 import AppKit
+@preconcurrency
+import ApplicationServices
 import Foundation
 
 public enum Accessibility {
