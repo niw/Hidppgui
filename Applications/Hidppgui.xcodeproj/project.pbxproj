@@ -3,42 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5435DB0E2B3293D000217B5A /* HIDPP in Frameworks */ = {isa = PBXBuildFile; productRef = 5435DB0D2B3293D000217B5A /* HIDPP */; };
-		544DF0CE2B2D24CF00506863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544DF0CD2B2D24CF00506863 /* Assets.xcassets */; };
-		544DF0D12B2D24CF00506863 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544DF0D02B2D24CF00506863 /* Preview Assets.xcassets */; };
-		546D6FDA2BD73BD300C6131F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D6FD92BD73BD300C6131F /* Settings.swift */; };
 		546D6FE02BD74F5200C6131F /* ServiceSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 546D6FDF2BD74F5200C6131F /* ServiceSupport */; };
-		546D6FE22BD74F8C00C6131F /* DeviceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D6FE12BD74F8C00C6131F /* DeviceSetting.swift */; };
-		546D6FE42BD7553F00C6131F /* MainMenu.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 546D6FE32BD7553F00C6131F /* MainMenu.xcstrings */; };
-		54C50DF72B2D256E00F16034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF12B2D256E00F16034 /* AppDelegate.swift */; };
-		54C50DF82B2D256E00F16034 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF22B2D256E00F16034 /* Service.swift */; };
-		54C50DFA2B2D256E00F16034 /* LoginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF42B2D256E00F16034 /* LoginItem.swift */; };
-		54C50DFB2B2D256E00F16034 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF52B2D256E00F16034 /* MainApp.swift */; };
-		54C50DFC2B2D256E00F16034 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C50DF62B2D256E00F16034 /* MainMenu.swift */; };
-		54F2C3832BCB92E100E66E68 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2C3822BCB92E100E66E68 /* Device.swift */; };
-		54F2C3852BCE549600E66E68 /* MouseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F2C3842BCE549600E66E68 /* MouseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		544DF0C62B2D24CE00506863 /* Hidppgui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hidppgui.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		544DF0CD2B2D24CF00506863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		544DF0D02B2D24CF00506863 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		546D6FD92BD73BD300C6131F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		546D6FE12BD74F8C00C6131F /* DeviceSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSetting.swift; sourceTree = "<group>"; };
-		546D6FE32BD7553F00C6131F /* MainMenu.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = MainMenu.xcstrings; sourceTree = "<group>"; };
 		549A4A702B2D9C67009F9877 /* Hidppgui */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Hidppgui; path = ..; sourceTree = "<group>"; };
-		54C50DF12B2D256E00F16034 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54C50DF22B2D256E00F16034 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		54C50DF42B2D256E00F16034 /* LoginItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginItem.swift; sourceTree = "<group>"; };
-		54C50DF52B2D256E00F16034 /* MainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
-		54C50DF62B2D256E00F16034 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		54F2C3822BCB92E100E66E68 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		54F2C3842BCE549600E66E68 /* MouseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5465EB7D2E014D7E00ED1778 /* Hidppgui */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Hidppgui;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		544DF0C32B2D24CE00506863 /* Frameworks */ = {
@@ -63,10 +47,10 @@
 		544DF0BD2B2D24CE00506863 = {
 			isa = PBXGroup;
 			children = (
-				544DF0C82B2D24CE00506863 /* Hidppgui */,
+				5465EB7D2E014D7E00ED1778 /* Hidppgui */,
 				54C50DFD2B2D25CB00F16034 /* Packages */,
-				544DF0C72B2D24CE00506863 /* Products */,
 				544C08A22B2D2663002A1489 /* Frameworks */,
+				544DF0C72B2D24CE00506863 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,49 +60,6 @@
 				544DF0C62B2D24CE00506863 /* Hidppgui.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		544DF0C82B2D24CE00506863 /* Hidppgui */ = {
-			isa = PBXGroup;
-			children = (
-				544DF0CF2B2D24CF00506863 /* Preview Content */,
-				54C50DEF2B2D254700F16034 /* Resources */,
-				54C50DF02B2D255400F16034 /* Sources */,
-			);
-			path = Hidppgui;
-			sourceTree = "<group>";
-		};
-		544DF0CF2B2D24CF00506863 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				544DF0D02B2D24CF00506863 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		54C50DEF2B2D254700F16034 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				544DF0CD2B2D24CF00506863 /* Assets.xcassets */,
-				546D6FE32BD7553F00C6131F /* MainMenu.xcstrings */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		54C50DF02B2D255400F16034 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				54C50DF12B2D256E00F16034 /* AppDelegate.swift */,
-				54F2C3822BCB92E100E66E68 /* Device.swift */,
-				546D6FE12BD74F8C00C6131F /* DeviceSetting.swift */,
-				54C50DF42B2D256E00F16034 /* LoginItem.swift */,
-				54C50DF52B2D256E00F16034 /* MainApp.swift */,
-				54C50DF62B2D256E00F16034 /* MainMenu.swift */,
-				54F2C3842BCE549600E66E68 /* MouseService.swift */,
-				54C50DF22B2D256E00F16034 /* Service.swift */,
-				546D6FD92BD73BD300C6131F /* Settings.swift */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		54C50DFD2B2D25CB00F16034 /* Packages */ = {
@@ -144,6 +85,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5465EB7D2E014D7E00ED1778 /* Hidppgui */,
 			);
 			name = Hidppgui;
 			packageProductDependencies = (
@@ -171,7 +115,6 @@
 				};
 			};
 			buildConfigurationList = 544DF0C12B2D24CE00506863 /* Build configuration list for PBXProject "Hidppgui" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -180,6 +123,7 @@
 				ja,
 			);
 			mainGroup = 544DF0BD2B2D24CE00506863;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 544DF0C72B2D24CE00506863 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,9 +138,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546D6FE42BD7553F00C6131F /* MainMenu.xcstrings in Resources */,
-				544DF0D12B2D24CF00506863 /* Preview Assets.xcassets in Resources */,
-				544DF0CE2B2D24CF00506863 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,15 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F2C3852BCE549600E66E68 /* MouseService.swift in Sources */,
-				54C50DF72B2D256E00F16034 /* AppDelegate.swift in Sources */,
-				54C50DFC2B2D256E00F16034 /* MainMenu.swift in Sources */,
-				546D6FE22BD74F8C00C6131F /* DeviceSetting.swift in Sources */,
-				54C50DF82B2D256E00F16034 /* Service.swift in Sources */,
-				54F2C3832BCB92E100E66E68 /* Device.swift in Sources */,
-				54C50DFB2B2D256E00F16034 /* MainApp.swift in Sources */,
-				546D6FDA2BD73BD300C6131F /* Settings.swift in Sources */,
-				54C50DFA2B2D256E00F16034 /* LoginItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
