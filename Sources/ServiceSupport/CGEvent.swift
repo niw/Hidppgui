@@ -96,7 +96,7 @@ public extension CGEvent {
                         let this = Unmanaged<CGEvent.Tap>.fromOpaque(refcon).takeUnretainedValue()
                         this.callback(event)
                     }
-                    return Unmanaged.passRetained(event)
+                    return Unmanaged.passUnretained(event)
                 },
                 userInfo: Unmanaged.passUnretained(self).toOpaque()
             )
