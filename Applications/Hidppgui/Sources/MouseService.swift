@@ -11,7 +11,7 @@ import HIDPP
 import ServiceSupport
 
 // See the inline comments on `MouseService.deinit`.
-extension CGEvent.Tap: @unchecked Sendable {
+extension CGEvent.Tap: @retroactive @unchecked Sendable {
 }
 
 // See the inline comments on `MouseService.start()`.
