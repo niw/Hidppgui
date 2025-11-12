@@ -92,7 +92,11 @@ public extension CGEvent {
                     event: CGEvent,
                     refcon: UnsafeMutableRawPointer?
                 ) -> Unmanaged<CGEvent>? in
-                    if let refcon {
+                    // TODO: Handle the event that tap is being disabled.
+                    if type != .tapDisabledByTimeout,
+                       type != .tapDisabledByUserInput,
+                       let refcon
+                    {
                         let this = Unmanaged<CGEvent.Tap>.fromOpaque(refcon).takeUnretainedValue()
                         this.callback(event)
                     }
